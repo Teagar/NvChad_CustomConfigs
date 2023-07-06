@@ -32,10 +32,27 @@ nmap oo A<CR>
 
 ]])
 
+-- Test saved JS file with Node
 vim.cmd([[
-  autocmd FileType javascript nnoremap tn :execute "!node " . expand("%")<CR>
+  autocmd FileType javascript nnoremap tns :execute "!node " . expand("%")<CR>
 ]])
 
+-- Test unsaved JS file with Node
+vim.cmd([[
+  function! TestCurrentJavaScriptCode()
+    if &filetype ==# 'javascript'
+        let code = getline(1, '$')
+        let temp_file = tempname()
+        call writefile(code, temp_file)
+        execute '!node ' . temp_file
+        silent! !rm ' . temp_file
+    else
+        echo 'O arquivo atual não é um arquivo JavaScript.'
+    endif
+endfunction
+
+nnoremap tnu :call TestCurrentJavaScriptCode()<CR>
+]])
 
 ---- plugins ------------------------------------------------------------------
 
