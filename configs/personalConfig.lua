@@ -32,6 +32,10 @@ nmap oo A<CR>
 
 ]])
 
+vim.cmd([[
+  autocmd FileType javascript nnoremap tn :execute "!node " . expand("%")<CR>
+]])
+
 
 ---- plugins ------------------------------------------------------------------
 
