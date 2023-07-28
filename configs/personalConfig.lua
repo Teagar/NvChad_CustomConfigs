@@ -7,12 +7,13 @@ local api = vim.api
 --opt.colorcolumn = '80'
 opt.scrolloff = 8
 -- Fix cursor when switching from insert mode to normal
-api.nvim_set_keymap('i', '<Esc>', '<Esc>`^', { noremap = true })
+-- api.nvim_set_keymap('i', '<Esc>', '<Esc>`^', { noremap = true })
 opt.guicursor = ''
 opt.cmdheight = 2
 opt.backup = false
 opt.writebackup = false
-vim.o.virtualedit = 'onemore'
+-- vim.o.virtualedit = 'onemore'
+opt.whichwrap:append ''
 
 vim.cmd([[
   augroup highlight_current_buffer
@@ -32,6 +33,27 @@ nmap oo A<CR>
 
 ]])
 
+-- Test saved JS file with Node
+vim.cmd([[
+  autocmd FileType javascript nnoremap tns :execute "!node " . expand("%")<CR>
+]])
+
+-- Test unsaved JS file with Node
+vim.cmd([[
+  function! TestCurrentJavaScriptCode()
+    if &filetype ==# 'javascript'
+        let code = getline(1, '$')
+        let temp_file = tempname()
+        call writefile(code, temp_file)
+        execute '!node ' . temp_file
+        silent! !rm ' . temp_file
+    else
+        echo 'O arquivo atual não é um arquivo JavaScript.'
+    endif
+endfunction
+
+nnoremap tnu :call TestCurrentJavaScriptCode()<CR>
+]])
 
 ---- plugins ------------------------------------------------------------------
 

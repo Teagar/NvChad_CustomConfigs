@@ -1,4 +1,4 @@
-local status_ok, mason_null_ls = pcall(require, "mason-null-ls")
+--local status_ok, mason_null_ls = pcall(require, "mason-null-ls")
 if not status_ok then
 	return
 end

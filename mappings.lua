@@ -7,8 +7,8 @@ M.general = {
   -- },
 
   i = {
-    ["<c-c>"] = { '"+y', " ", opts = { nowait = true } },
-    ["<c-v>"] = { "<c-r>+", " ", opts = { nowait = true }},
+    -- ["<c-c>"] = { '"+y', " ", opts = { nowait = true } },
+    -- ["<c-v>"] = { "<c-r>+", " ", opts = { nowait = true }},
     ["<S-Down>"] = { "<cmd>t.<cr>", " ", opts = { nowait = true }},
     ["<M-Down>"] = { "<cmd>m+<cr>", " ", opts = { nowait = true }},
     ["<S-Up>"] = { "<cmd>t -1<cr>", " ", opts = { nowait = true }},
@@ -25,8 +25,8 @@ M.general = {
     ["<A-j>"] = { ":m .+1<CR>==", " ", opts = { nowait = true } },
     ["<A-k>"] = { ":m .-2<CR>==", " ", opts = { nowait = true } },
     ["p"] = { '"_dP', " ", opts = { nowait = true } },
-    ["<c-c>"] = { '"+y', " ", opts = { nowait = true } },
-    ["<c-v>"] = { '"+p', " ", opts = { nowait = true } },
+    -- ["<c-c>"] = { '"+y', " ", opts = { nowait = true } },
+    -- ["<c-v>"] = { '"+p', " ", opts = { nowait = true } },
     ["J"] = { ":move '>+1<CR>gv-gv", " ", opts = { nowait = true } },
     ["K"] = { ":move '<-2<CR>gv-gv", " ", opts = { nowait = true } },
     -- ["<A-j>"] = { ":move '>+1<CR>gv-gv", " ", opts = { nowait = true } },
@@ -39,8 +39,8 @@ M.general = {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<C-]>"] = { function() require("Comment.api").toggle.linewise.current() end, " ", opts = { nowait = true } },
-    ["<c-c>"] = { '"+y', " ", opts = { nowait = true } },
-    ["<c-v>"] = { '"+p', " ", opts = { nowait = true } },
+    -- ["<c-c>"] = { '"+y', " ", opts = { nowait = true } },
+    -- ["<c-v>"] = { '"+p', " ", opts = { nowait = true } },
     ["<S-Down>"] = { "<cmd>t.<cr>", " ", opts = { nowait = true } },
     ["<S-Up>"] = { "<cmd>t -1<cr>", " ", opts = { nowait = true } },
     ["<M-J>"] = { "<cmd>t.<cr>", " ", opts = { nowait = true } },
