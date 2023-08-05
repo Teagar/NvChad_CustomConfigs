@@ -83,7 +83,7 @@ nnoremap tnu :call TestCurrentJavaScriptCode()<CR>
 
 -- Test saved C# file with mono
 vim.cmd([[
-  autocmd FileType cs nnoremap tms :execute "!mcs -out:" . expand("%:r") . ".exe" . expand("%")<CR>
+  autocmd FileType cs nnoremap tms :execute "!mcs -out:" . expand("%:r") . ".exe " . expand("%") . ' && mono ' . expand("%:r") . '.exe'<CR>
 ]])
 
 -- Test unsaved C# file with mono
