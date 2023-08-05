@@ -33,27 +33,6 @@ nmap oo A<CR>
 
 ]])
 
--- Test saved JS file with Node
-vim.cmd([[
-  autocmd FileType javascript nnoremap tns :execute "!node " . expand("%")<CR>
-]])
-
--- Test unsaved JS file with Node
-vim.cmd([[
-  function! TestCurrentJavaScriptCode()
-    if &filetype ==# 'javascript'
-        let code = getline(1, '$')
-        let temp_file = tempname()
-        call writefile(code, temp_file)
-        execute '!node ' . temp_file
-        silent! !rm ' . temp_file
-    else
-        echo 'O arquivo atual não é um arquivo JavaScript.'
-    endif
-endfunction
-
-nnoremap tnu :call TestCurrentJavaScriptCode()<CR>
-]])
 
 -- relative Numbers
 -- vim.cmd([[set number relativenumber]])
@@ -78,3 +57,50 @@ augroup END
 --vim.cmd([[highlight VirtColumn guifg=#FF7A91]])
 
 
+-- test -----------------------------------------------------------------------
+
+-- Test saved JS file with Node
+vim.cmd([[
+  autocmd FileType javascript nnoremap tns :execute "!node " . expand("%")<CR>
+]])
+
+-- Test unsaved JS file with Node
+vim.cmd([[
+  function! TestCurrentJavaScriptCode()
+    if &filetype ==# 'javascript'
+        let code = getline(1, '$')
+        let temp_file = tempname()
+        call writefile(code, temp_file)
+        execute '!node ' . temp_file
+        silent! !rm ' . temp_file
+    else
+        echo 'The current file is not a JavaScript'
+    endif
+endfunction
+
+nnoremap tnu :call TestCurrentJavaScriptCode()<CR>
+]])
+
+-- Test saved C# file with mono
+vim.cmd([[
+  autocmd FileType cs nnoremap tms :execute "!mcs -out:" . expand("%:r") . ".exe" . expand("%")<CR>
+]])
+
+-- Test unsaved C# file with mono
+-- vim.cmd([[
+--   function! TestCurrentCSharpCode()
+--     if &filetype ==# 'cs'
+--       let code = getline(1, '$')
+--       let temp_file = tempname()
+--       call writefile(code, temp_file)
+--       let exe_file = expand("%:r") . "tmp.exe"
+--       execute '!mcs -out:' . exe_file . ' ' . temp_file
+--       execute '!mono ' . exe_file
+--       silent! '!rm ' . temp_file . ' ' . exe_file
+--     else
+--       echo 'The current file is not a C#'
+--     endif
+--   endfunction
+--
+-- nnoremap tmu :call TestCurrentCSharpCode()<CR>
+-- ]])
