@@ -12,9 +12,6 @@ opt.guicursor = ''
 opt.cmdheight = 2
 opt.backup = false
 opt.writebackup = false
--- vim.o.virtualedit = 'onemore'
-opt.whichwrap:append ''
-
 vim.cmd([[
   augroup highlight_current_buffer
     autocmd!
@@ -47,6 +44,7 @@ augroup END
 ]])
 
 ---- plugins ------------------------------------------------------------------
+
 
 -- plugins --------------------------------------------------------------------
 

@@ -264,7 +264,23 @@ end
 ---@type NvPluginSpec[]
 local plugins = {
 
+  -- Teagar Plugins
+  {
+    "andweeb/presence.nvim",
+    config = {
+      neovim_image_text   = "The One True Text Editor", -- Text displayed when hovered over the Neovim image
+      enable_line_number = true,
+      
+    },
+    --   require "custom.configs.presence"
+    -- end,
+    lazy = false,
+    -- config = require "custom.configs.presence"
+  },
+
+
   -- Override plugin definition options
+
 
   {
     "neovim/nvim-lspconfig",

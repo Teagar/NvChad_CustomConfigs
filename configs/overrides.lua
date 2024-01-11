@@ -51,6 +51,7 @@ M.nvimtree = {
     },
   },
 }
+vim.opt.whichwrap:remove "<>[]lh"
 
 return M
 
