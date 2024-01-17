@@ -3,7 +3,7 @@
 
 ![home!](img/home.png)
 ## Install dependencies
-1. Install Neovim 8.0+ https://github.com/neovim/neovim/releases/tag/v0.8.1
+1. Install Neovim 9.5+ https://github.com/neovim/neovim/releases/tag/v0.9.5
 2. C++ (windows) Compiler https://www.msys2.org/
 3. GIT https://git-scm.com/download/win
 4. NodeJs https://nodejs.org/en/
