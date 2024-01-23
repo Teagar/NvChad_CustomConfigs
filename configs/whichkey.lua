@@ -3,10 +3,58 @@ if not status_ok then
 	return
 end
 
+-- config for ToggleTerm
+
+function _LAZYGIT_TOGGLE()
+  local Terminal = require("toggleterm.terminal").Terminal
+  local lazygit = Terminal:new { cmd = "lazygit", hidden = true }
+  lazygit:toggle()
+end
+
+function _NODE_TOGGLE()
+  local Terminal = require("toggleterm.terminal").Terminal
+  local node = Terminal:new { cmd = "node", hidden = true }
+  node:toggle()
+end
+
+function _NCDU_TOGGLE()
+  local Terminal = require("toggleterm.terminal").Terminal
+  local ncdu = Terminal:new { cmd = "ncdu", hidden = true }
+  ncdu:toggle()
+end
+
+function _HTOP_TOGGLE()
+  local Terminal = require("toggleterm.terminal").Terminal
+  local htop = Terminal:new { cmd = "htop", hidden = true }
+  htop:toggle()
+end
+
+function _PYTHON_TOGGLE()
+  local Terminal = require("toggleterm.terminal").Terminal
+  local python = Terminal:new { cmd = "python", hidden = true }
+  python:toggle()
+end
+
+function _NEWTAB_TOGGLE()
+  local Terminal = require("toggleterm.terminal").Terminal
+  local pwsh = Terminal:new { cmd = "pwsh", hidden = true, direction = "tab" }
+  pwsh:toggle()
+end
+
+function _LIVE_SERVER()
+  local Terminal = require("toggleterm.terminal").Terminal
+  local live_server = Terminal:new {
+    cmd = "live-server",
+    hidden = true,
+    direction = "tab",
+  }
+  live_server:toggle()
+end
+
 local setup = {
 	icons = {
     breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-    separator = "  ", -- symbol used between a key and it's label
+    separator = " 󰁔 ", -- symbol used between a key and it's label
     group = "+", -- symbol prepended to a group
   },
 
@@ -189,6 +237,8 @@ local mappings = {
 
 	t = {
 		name = "Terminal",
+    l = { "<cmd>lua _LIVE_SERVER()<cr>", "Live Server" },
+    P = { "<cmd>lua _NEWTAB_TOGGLE()<cr>", "Power Shell" },
 		n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
 		u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
 		t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
@@ -196,6 +246,7 @@ local mappings = {
 		f = { "<cmd>ToggleTerm direction=float<cr>" .. trn, "Float" },
 		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>" .. trn, "Vertical" },
+    s = { "<cmd>ToggleTerm direction=tab<cr>", "New Tab" },
 	},
 	r = {
 		name = "Run",
@@ -355,7 +406,6 @@ local mappings = {
 		d = { "<cmd>Lazy debug<cr>", "Debug" },
 	},
 }
-
 
 which_key.setup(setup)
 which_key.register(mappings, opts)
