@@ -96,7 +96,7 @@ return {
 		FindFile = "",
 		FindText = "",
 		Fire = "",
-		Folder = "",
+		Folder = "",
 		FolderOpen = "",
 		FolderSymlink = "",
 		Forward = "",
