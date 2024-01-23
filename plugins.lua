@@ -1,6 +1,7 @@
 local overrides = require "custom.configs.overrides"
 -- initial active plugins optional
 local active_debug = false
+local active_toggleterm = true
 local active_visualmulti = false
 local active_lspinstaller = false
 local active_smartsplit = false
@@ -19,7 +20,20 @@ local smartsplit = {}
 local dressing = {}
 local winbar = {}
 local cmdline = {}
+local toggleterm = {}
 -- activation
+if active_toggleterm then
+  toggleterm = {
+    {
+      "akinsho/toggleterm.nvim",
+      cmd = "ToggleTerm",
+      event = "BufRead",
+      config = function()
+        require "custom.configs.toggleterm"
+      end,
+    },
+  }
+end
 if active_cmdline then
   cmdline = {
     {
@@ -268,9 +282,8 @@ local plugins = {
   {
     "andweeb/presence.nvim",
     config = {
-      neovim_image_text   = "The One True Text Editor", -- Text displayed when hovered over the Neovim image
+      neovim_image_text = "The One True Text Editor", -- Text displayed when hovered over the Neovim image
       enable_line_number = true,
-      
     },
     --   require "custom.configs.presence"
     -- end,
@@ -278,9 +291,7 @@ local plugins = {
     -- config = require "custom.configs.presence"
   },
 
-
   -- Override plugin definition options
-
 
   {
     "neovim/nvim-lspconfig",
@@ -495,6 +506,8 @@ local plugins = {
   debug,
   -- for cmd line popup
   cmdline,
+  -- for toggleterm
+  toggleterm,
 }
 
 return plugins
