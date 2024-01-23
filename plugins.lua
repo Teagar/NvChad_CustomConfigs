@@ -287,7 +287,7 @@ local plugins = {
     },
     --   require "custom.configs.presence"
     -- end,
-    lazy = false,
+    lazy = true,
     -- config = require "custom.configs.presence"
   },
 
