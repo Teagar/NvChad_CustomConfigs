@@ -8,6 +8,7 @@ local M = {}
 M.override = {
   Comment = {
     italic = true,
+    fg = "#96A7EF",
   },
 }
 
