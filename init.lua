@@ -1,4 +1,7 @@
 local autocmd = vim.api.nvim_create_autocmd
+local opt = vim.opt
+local g = vim.g
+local lpath = vim.fn.stdpath "config" .. "/lua/custom/my-snippets"
 
 -- Auto resize panes when resizing nvim window
 autocmd("VimResized", {
@@ -9,18 +12,27 @@ autocmd("VimResized", {
 autocmd("VimEnter", {
   pattern = "*",
   callback = function()
-    vim.opt.statusline = "%#normal# "
+    opt.statusline = "%#normal# "
   end,
 })
 
-local opt = vim.opt
-opt.cmdheight = 0
+opt.scrolloff = 8
+opt.cmdheight = 2
+-- opt.colorcolumn = '80'
+
+opt.guicursor = ''
+
+opt.backup = false
+opt.writebackup = false
+
+-- When cursor reaches end/beginning of line nothing happens
+opt.whichwrap = opt.whichwrap - "<>[]hl"
 
 require "custom.configs.format_onsave"
 require "custom.configs.personalConfig"
-local lpath = vim.fn.stdpath "config" .. "/lua/custom/my-snippets"
-vim.g.vscode_snippets_path = lpath
-vim.g.snipmate_snippets_path = lpath
+
+g.vscode_snippets_path = lpath
+g.snipmate_snippets_path = lpath
 
 -- autocmd("VimEnter",{
 --   pattern="*",
