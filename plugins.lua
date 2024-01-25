@@ -321,6 +321,7 @@ local plugins = {
     config = function()
       require "custom.configs.ufo"
     end,
+    lazy = false,
   },
 
   {
