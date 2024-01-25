@@ -7,7 +7,7 @@
 ![home!](img/home.png)
 
 ## Install dependencies
-- Install Neovim 0.9.5+ https://github.com/neovim/neovim/releases/tag/v0.9.5
+- Neovim 0.9.5+ https://github.com/neovim/neovim/releases/tag/v0.9.5
 - C++ (Windows) Compiler https://www.msys2.org/
 - GIT https://git-scm.com/downloads
 - NodeJs https://nodejs.org/en/
@@ -16,6 +16,7 @@
 - Nerd Font https://github.com/ryanoasis/nerd-fonts
 - Windows Terminal (Windows) https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-id&gl=id
 - Powershell (Windows) https://apps.microsoft.com/store/detail/powershell/9MZ1SNWT0N5D?hl=en-id&gl=id
+- NvChad https://nvchad.com/
 
 # Config Linux (Linux Debian Based)
 
