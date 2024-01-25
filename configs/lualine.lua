@@ -200,7 +200,7 @@ lualine.setup {
   sections = {
     lualine_a = { branch },
     lualine_b = { mode },
-    lualine_c = { diagnostics, lsp_info },
+    lualine_c = { file_name, diagnostics, lsp_info },
     -- lualine_c = { file_name, lsp_info },
     -- lualine_x = { "encoding", "fileformat", "filetype" },
     lualine_x = { diff, spaces, "encoding", filetype },
