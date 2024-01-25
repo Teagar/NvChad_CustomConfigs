@@ -18,7 +18,7 @@
 - [Powershell](https://apps.microsoft.com/store/detail/powershell/9MZ1SNWT0N5D?hl=en-id&gl=id) (*Windows*)
 - [NvChad](https://nvchad.com/)
 
-# Config Linux (Linux Debian Based)
+## Config Linux (Linux Debian Based)
 
 - Make sure the account is administrator
 
