@@ -280,6 +280,50 @@ local plugins = {
 
   -- Teagar Plugins
   {
+    'kevinhwang91/nvim-ufo',
+    dependencies = { 'kevinhwang91/promise-async' },
+    keys = {
+          -- stylua: ignore start
+          { "zm", function() require("ufo").
+            closeAllFolds()
+            end, desc = " 󱃄 Close All Folds" },
+
+          { "zk", function() require("ufo").
+            goPreviousClosedFold() end,
+            desc = " 󱃄 Goto Prev Fold" },
+
+          { "zj", function() require("ufo").
+            goNextClosedFold() end,
+            desc = " 󱃄 Goto Next Fold" },
+
+          { "zr", function() require("ufo").
+            openFoldsExceptKinds { "comment", "imports" } end,
+            desc = " 󱃄 Open All Folds" },
+
+          { "z1", function() require("ufo").
+            closeFoldsWith(1) end,
+            desc = " 󱃄 Close L1 Folds" },
+
+          { "z2", function() require("ufo").
+            closeFoldsWith(2) end,
+            desc = " 󱃄 Close L2 Folds" },
+
+          { "z3", function() require("ufo").
+            closeFoldsWith(3) end,
+            desc = " 󱃄 Close L3 Folds" },
+
+          { "z4", function() require("ufo").
+            closeFoldsWith(4) end,
+            desc = " 󱃄 Close L4 Folds" },
+
+          -- stylua: ignore end
+        },
+    config = function()
+      require "custom.configs.ufo"
+    end,
+  },
+
+  {
     "andweeb/presence.nvim",
     config = {
       neovim_image_text = "The One True Text Editor", -- Text displayed when hovered over the Neovim image
