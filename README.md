@@ -13,7 +13,6 @@
 - [Node.js](https://nodejs.org/en/)
 - [Ripgrep](https://github.com/BurntSushi/ripgrep)
 - [Lazygit](https://github.com/jesseduffield/lazygit)
-- [StyLua](https://github.com/JohnnyMorganz/StyLua)
 - [Nerd Font](https://github.com/ryanoasis/nerd-fonts)
 - [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-id&gl=id) (*Windows*)
 - [Powershell](https://apps.microsoft.com/store/detail/powershell/9MZ1SNWT0N5D?hl=en-id&gl=id) (*Windows*)
