@@ -25,16 +25,6 @@ M.ui = {
     --   "             Teagar              ",
     -- },
     header = {
-      -- "           ▄ ▄                   ",
-      -- "       ▄   ▄▄▄     ▄ ▄▄▄ ▄ ▄     ",
-      -- "       █ ▄ █▄█ ▄▄▄ █ █▄█ █ █     ",
-      -- "    ▄▄ █▄█▄▄▄█ █▄█▄█▄▄█▄▄█ █     ",
-      -- "  ▄ █▄▄█ ▄ ▄▄ ▄█ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄  ",
-      -- "  █▄▄▄▄ ▄▄▄ █ ▄ ▄▄▄ ▄ ▄▄▄ ▄ ▄ █ ▄",
-      -- "▄ █ █▄█ █▄█ █ █ █▄█ █ █▄█ ▄▄▄ █ █",
-      -- "█▄█ ▄ █▄▄█▄▄█ █ ▄▄█ █ ▄ █ █▄█▄█ █",
-      -- "    █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█ █▄█▄▄▄█    ",
-      -- "                                 ",
       "         ┏┳┓┏┓┏┓┏┓┏┓┳┓           ",
       "          ┃ ┣ ┣┫┃┓┣┫┣┫           ",
       "          ┻ ┗┛┛┗┗┛┛┗┛┗           ",
@@ -49,6 +39,6 @@ M.plugins = "custom.plugins"
 -- check core.mappings for table structure
 M.mappings = require "custom.mappings"
 
-M.format_on_save = 0 -- 1= true 0=false
+M.format_on_save = 0 -- 1=true 0=false
 
 return M
