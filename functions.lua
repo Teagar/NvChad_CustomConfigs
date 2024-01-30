@@ -1,4 +1,3 @@
-
 local M = {}
 
 function M.smart_quit()
