@@ -9,7 +9,6 @@ M.general = {
     ["<M-Up>"] = { "<cmd>m-2<cr>", " ", opts = { nowait = true }},
     ["<C-s>"] = { "<cmd>w<cr>", " ", opts = { nowait = true }},
     ["<C-l>"] = { "<cmd>LiveServer start<cr><cr>", " ", opts = { nowait = true }},
-    ["<C-f>"] = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", " ", opts = { nowait = true } },
   },
   v = {
     ["<A-j>"] = { ":m .+1<CR>==", " ", opts = { nowait = true } },
@@ -33,8 +32,6 @@ M.general = {
     ["<M-Up>"] = { "<cmd>m-2<cr>", " ", opts = { nowait = true } },
     ["<M-j>"] = { "<cmd>m+<cr>", " ", opts = { nowait = true } },
     ["<M-k>"] = { "<cmd>m-2<cr>", " ", opts = { nowait = true } },
-    ["<C-f>"] = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", " ", opts = { nowait = true } },
-    ["q"] = { "<cmd>q<cr>", " ", opts = { nowait = true } },
     ["<leader>bb"] = { "<cmd>tabnew<cr>", " ", opts = { nowait = true } },
     ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", " ", opts = { nowait = true } },
     ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", " ", opts = { nowait = true } },
@@ -45,7 +42,6 @@ M.general = {
 M.whichkey={
   n = {
     ["<leader>o"] = { "<cmd> NvimTreeFocus <CR>", "Testing Mapping" },
-    -- ["<leader>r"] = { name = "+Run" },
   }
 }
 
