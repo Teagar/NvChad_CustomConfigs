@@ -18,7 +18,6 @@ M.general = {
     },
     ["<A-j>"] = { ":m .+1<CR>==", " ", opts = { nowait = true } },
     ["<A-k>"] = { ":m .-2<CR>==", " ", opts = { nowait = true } },
-    ["p"] = { '"_dP', " ", opts = { nowait = true } },
     ["J"] = { ":move '>+1<CR>gv-gv", " ", opts = { nowait = true } },
     ["K"] = { ":move '<-2<CR>gv-gv", " ", opts = { nowait = true } },
     -- ["<A-j>"] = { ":move '>+1<CR>gv-gv", " ", opts = { nowait = true } },
