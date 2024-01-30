@@ -12,10 +12,6 @@ M.general = {
     ["<C-f>"] = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", " ", opts = { nowait = true } },
   },
   v = {
-    ["<C-]>"] = {
-      "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>",
-      " ", opts = { nowait = true },
-    },
     ["<A-j>"] = { ":m .+1<CR>==", " ", opts = { nowait = true } },
     ["<A-k>"] = { ":m .-2<CR>==", " ", opts = { nowait = true } },
     ["J"] = { ":move '>+1<CR>gv-gv", " ", opts = { nowait = true } },
@@ -29,7 +25,6 @@ M.general = {
   n = {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
-    ["<C-]>"] = { function() require("Comment.api").toggle.linewise.current() end, " ", opts = { nowait = true } },
     ["<S-Down>"] = { "<cmd>t.<cr>", " ", opts = { nowait = true } },
     ["<S-Up>"] = { "<cmd>t -1<cr>", " ", opts = { nowait = true } },
     ["<M-J>"] = { "<cmd>t.<cr>", " ", opts = { nowait = true } },
