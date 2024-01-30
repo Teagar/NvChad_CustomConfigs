@@ -68,3 +68,22 @@ local python = Terminal:new { cmd = "python", hidden = true }
 function _PYTHON_TOGGLE()
   python:toggle()
 end
+
+-- toggleterm manager ----------------
+
+local toggleterm_manager = require("toggleterm-manager")
+local actions = toggleterm_manager.actions
+
+toggleterm_manager.setup {
+	mappings = {
+	    i = {
+	      ["<CR>"] = { action = actions.create_and_name_term, exit_on_action = true },
+	      ["<C-d>"] = { action = actions.delete_term, exit_on_action = false },
+	    },
+	    n = {
+	      ["a"] = { action = actions.create_and_name_term, exit_on_action = true },
+	      ["x"] = { action = actions.delete_term, exit_on_action = false },
+	      ["s"] = { action = actions.rename_term, exit_on_action = false },
+	    },
+	},
+}

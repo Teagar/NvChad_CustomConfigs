@@ -278,7 +278,25 @@ end
 ---@type NvPluginSpec[]
 local plugins = {
 
-  -- Teagar Plugins
+  -- More Plugins
+  {
+    "ryanmsnyder/toggleterm-manager.nvim",
+    dependencies = {
+      "akinsho/nvim-toggleterm.lua",
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim",
+    },
+    config = true,
+  },
+
+  {
+    "CRAG666/betterTerm.nvim",
+    config = function()
+      require "custom.configs.betterterm"
+    end,
+    lazy = false
+  },
+
   {
     'kevinhwang91/nvim-ufo',
     dependencies = { 'kevinhwang91/promise-async' },
