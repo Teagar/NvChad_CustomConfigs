@@ -7,22 +7,23 @@
 ![home!](img/home.png)
 
 ## Install dependencies
-- Install Neovim 0.9.5+ https://github.com/neovim/neovim/releases/tag/v0.9.5
-- C++ (Windows) Compiler https://www.msys2.org/
-- GIT https://git-scm.com/downloads
-- NodeJs https://nodejs.org/en/
-- Ripgrep https://github.com/BurntSushi/ripgrep
-- Lazygit https://github.com/jesseduffield/lazygit
-- Nerd Font https://github.com/ryanoasis/nerd-fonts
-- Windows Terminal (Windows) https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-id&gl=id
-- Powershell (Windows) https://apps.microsoft.com/store/detail/powershell/9MZ1SNWT0N5D?hl=en-id&gl=id
+- [Neovim](https://github.com/neovim/neovim/tags) (0.9.0+ or Stable)
+- [MSYS2](https://www.msys2.org/) (C++ *Windows* Compiler)
+- [Git](https://git-scm.com/downloads)
+- [Node.js](https://nodejs.org/en/)
+- [Ripgrep](https://github.com/BurntSushi/ripgrep)
+- [Lazygit](https://github.com/jesseduffield/lazygit)
+- [Nerd Font](https://github.com/ryanoasis/nerd-fonts)
+- [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-id&gl=id) (*Windows*)
+- [Powershell](https://apps.microsoft.com/store/detail/powershell/9MZ1SNWT0N5D?hl=en-id&gl=id) (*Windows*)
+- [NvChad](https://nvchad.com/)
 
-# Config Linux (Linux Debian Based)
+## Config Linux (Linux Debian Based)
 
 - Make sure the account is administrator
 
 ```bash
-visudo
+sudo visudo
 [nama user] ALL=(ALL:ALL) ALL
 [nama user] ALL=(ALL) NOPASSWD:ALL
 ```
@@ -90,11 +91,11 @@ git clone https://github.com/Teagar/NvChad_CustomConfigs ~/.config/nvim/lua/cust
 ```
 ## Config Windows
 - Rename Config Original
-```bash
+```powershell
 Rename-Item "$env:LOCALAPPDATA\nvim\lua\custom" "$env:LOCALAPPDATA\nvim\lua\custom_backup"
 ```
 - New Clone Config
-```bash
+```powershell
 git clone https://github.com/Teagar/NvChad_CustomConfigs "$env:LOCALAPPDATA\nvim\lua\custom"
 ```
 
