@@ -34,18 +34,3 @@ require "custom.configs.personalConfig"
 g.vscode_snippets_path = lpath
 g.snipmate_snippets_path = lpath
 
--- autocmd("VimEnter",{
---   pattern="*",
---   command="Nvdash",
--- })
-
--- autocmd("WinEnter", {
---    pattern = "*",
---    callback = function()
---       if vim.bo.buftype ~= "terminal" then
---          vim.opt.statusline = "%!v:lua.require'ui.statusline'.run()"
---       else
---          vim.opt.statusline = "%#normal# "
---       end
---    end,
--- })
